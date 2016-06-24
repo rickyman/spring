@@ -1,0 +1,12 @@
+diff:
+BeanFactory它的职责包括：实例化、定位、配置应用程序中的对象及建立这些对象间的依赖。  
+FactoryBean(通常情况下，bean无须自己实现工厂模式，Spring容器担任工厂 角色；但少数情况下，容器中的bean本身就是工厂，其作用是产生其它bean实例),作用是产生其他bean实例。通常情况下，这种bean没有什么特 别的要求，仅需要提供一个工厂方法，该方法用来返回其他bean实例。由工厂bean产生的其他bean实例，不再由Spring容器产生，因此与普通 bean的配置不同，不再需要提供class元素。  
+
+myView:
+BeanFactory 实质是容器,属于spring容器的一个实现,是用来存放bean(定义以及实现在外部文件中)的,并且知道bean的一些信息.
+FactoryBean 实质是bean,只不过本身是一个工厂,可以获取它管理的bean,自己管理的,不是spring管理的,获取的bean是自己创建的.
+
+几个文章出处:
+1 http://zhangit.iteye.com/blog/1842271
+2 http://www.tuicool.com/articles/mm2q6rj
+3 http://blog.sina.com.cn/s/blog_5f1fe33f0100hyx7.html 
